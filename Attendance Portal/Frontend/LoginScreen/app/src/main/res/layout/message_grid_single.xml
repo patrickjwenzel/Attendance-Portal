@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="319dp"
+        android:layout_height="81dp">
+
+        <TextView
+            android:id="@+id/message_card_index"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="319dp"
+            android:layout_marginRight="319dp"
+            android:layout_marginBottom="81dp"
+            android:text="null"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/grid_text"
+            app:layout_constraintHorizontal_bias="0.19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/grid_message_image"
+                android:layout_width="40dp"
+                android:layout_height="31dp"
+                android:background="@drawable/circlebackgroundpink"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/grid_message_text"
+            android:layout_width="382dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="185dp"
+            android:layout_marginLeft="185dp"
+            android:text="Enter Chat Room for DEFAULTCLASS"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.229" />
+
+        <Button
+            android:id="@+id/enter_message_button"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="95dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="181dp"
+            android:layout_marginRight="181dp"
+            android:onClick="onClickEnterChat"
+            android:text="Enter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/grid_text" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="245dp"
+        android:layout_height="77dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/grid_text"
+            app:layout_constraintHorizontal_bias="0.19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/grid_image"
+                android:layout_width="40dp"
+                android:layout_height="31dp"
+                android:background="@drawable/circlebackgroundpink"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/grid_text"
+            android:layout_width="102dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="10dp"
+            android:text="DEFAULTCLASS"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.229" />
+
+        <Button
+            android:id="@+id/remove_button"
+            android:layout_width="80dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:onClick="onClickRemove"
+            android:text="Remove"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/grid_text"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/info_button"
+            android:layout_width="85dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="5dp"
+            android:onClick="onClickInfo"
+            android:text="Info"
+            app:layout_constraintStart_toEndOf="@+id/remove_button"
+            app:layout_constraintTop_toBottomOf="@+id/grid_text" />
+
+        <TextView
+            android:id="@+id/is_ta"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/info_button"
+            app:layout_constraintStart_toEndOf="@+id/grid_text" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

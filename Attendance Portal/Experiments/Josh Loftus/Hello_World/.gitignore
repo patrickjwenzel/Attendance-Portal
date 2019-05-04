@@ -1,0 +1,25 @@
+// Read a templete online and tried to apply it, not sure if it is complete or correct. Just started with beans.
+
+### STS ###
+
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+
+
+### IntelliJ IDEA ###
+
+*.iws
+.idea
+
+
+
+### NetBeans ###
+
+/nbproject/private/
+/dist/
+/.nb-gradle/
+/build/

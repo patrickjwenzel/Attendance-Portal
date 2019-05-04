@@ -1,0 +1,66 @@
+stages:
+    - mavenbuild
+    - maventest
+    - autodeploy
+    - androidbuild
+    - androidtest
+    
+maven-build:
+    stage: mavenbuild
+    tags:
+        - backend_runner
+    script:
+        - cd Backend/backend_final
+        - mvn package -B
+
+maven-test:
+    stage: maventest
+    tags:
+        - backend_runner
+    script:
+        - cd Backend/backend_final
+        - mvn test
+    artifacts:
+        paths:
+            - Backend/backend_final/target/*.jar
+            
+auto-deploy:
+    stage: autodeploy
+    tags:
+        - backend_runner
+    script:
+        - cd Backend/backend_final
+        - mvn package
+        - sudo mv target/*.jar /target/web-demo.jar
+        - sudo systemctl stop system-web-demo
+        - sudo systemctl start system-web-demo
+
+android-build: 
+    image: javiersantos/android-ci:latest
+    stage: androidbuild
+    before_script:
+        - export GRADLE_USER_HOME='pwd'/.gradle
+        - chmod +x ./Frontend/LoginScreen/gradlew
+    tags:
+        - frontend_runner
+    script:
+        - cd Frontend/LoginScreen
+        - ./gradlew assemble
+    artifacts:
+        paths:
+            - app/build/outputs/
+    
+unitTests:
+    image: javiersantos/android-ci:latest
+    stage: androidtest
+    before_script:
+        - export GRADLE_USER_HOME='pwd'/.gradle
+        - chmod +x ./Frontend/LoginScreen/gradlew
+    tags:
+        - frontend_runner
+    script:
+        - cd Frontend/LoginScreen
+        - ./gradlew test
+    artifacts:
+        paths:
+            - app/src/test/java/com/example/loginscreen

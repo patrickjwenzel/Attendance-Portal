@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminViewActivity">
+
+    <Button
+        android:id="@+id/admin_students"
+        android:layout_width="@android:dimen/thumbnail_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="109dp"
+        android:onClick="onClickSearchView"
+        android:text="Students"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_teachers" />
+
+    <TextView
+        android:id="@+id/adminHomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Welcome DEFAULTNAME"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/admin_classes"
+        android:layout_width="@android:dimen/thumbnail_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="109dp"
+        android:onClick="onClickSearchView"
+        android:text="Classes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminHomeTitle"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Button
+        android:id="@+id/admin_teachers"
+        android:layout_width="@android:dimen/thumbnail_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="109dp"
+        android:onClick="onClickSearchView"
+        android:text="Teachers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_classes" />
+
+    <Button
+        android:id="@+id/signOut"
+        android:layout_width="175dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="109dp"
+        android:onClick="signOut"
+        android:text="@string/signout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_students" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,53 @@
+<resources>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_forgotten_password">ForgottenPassword</string>
+    <string name="title_activity_password_reset">Password Reset</string>
+    <string name="send_reset">Reset</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="app_name">Attendance Portal</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="button_cancel">Cancel</string>
+
+    //These are for the homepage
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_setting">Settings</string>
+
+    <string name="school_text">School</string>
+    <string name="library_text">Library</string>
+    <string name="hospital_text">Hospital</string>
+    <string name="restaurant_text">Restaurant</string>
+    <string name="title_activity_teacher_view">TeacherViewActivity</string>
+    <string name="create_class">Create Class</string>
+    <string name="button_sign_in">Sign in</string>
+    <string name="register">Register</string>
+    <string name="title_activity_register">Register</string>
+    <string name="present_button">Present Com S</string>
+    <string name="stop_class">Stop Com S</string>
+    <string name="attended_students"></string>
+    <string name="remember">Remember Me</string>
+    <string name="newChat">New Chat</string>
+    <string name="connect">Connect</string>
+    <string name="enterMessage">Enter Your Message</string>
+    <string name="sendMessage">Send Message</string>
+    <string name="enter_password">Enter Your Password</string>
+    <string name="new_password">Enter New Password</string>
+    <string name="title_activity_change_course_info">ChangeCourseInfo</string>
+    <string name="signout">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="back">Back</string>
+    <string name="chat">Chat</string>
+    <string name="pass_reset">Reset Password</string>
+</resources>

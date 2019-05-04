@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ClassInfoActivity">
+
+    <TextView
+        android:id="@+id/activityClassInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
+
+    <LinearLayout
+        android:id="@+id/activityClassInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/remove_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="removeClass"
+            android:text="Remove Class"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/start_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickPresent"
+            android:text="Start Class"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/end_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickStopClass"
+            android:text="End Class"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/attendance_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickAttendanceViewer"
+            android:text="View Attendance"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/change_course_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChangeInfo"
+            android:text="Change Course Information"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/course_id_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/course_id_button"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClickDisplayCode"
+                android:text="Get Join Code"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/course_id_view"
+                android:layout_width="189dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="chat"
+            android:text="@string/chat"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/attended_students"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/serverMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/courseDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="@android:style/TextAppearance.Large" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Schedule"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+        <TextView
+            android:id="@+id/courseSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/recitationSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/labSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminSearchView">
+
+    <TextView
+        android:id="@+id/view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="DEFAULT_TITLE"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridView
+        android:id="@+id/search_grid"
+        android:layout_width="395dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:columnWidth="150dp"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/search_grid"
+        app:layout_constraintStart_toEndOf="@+id/search_button"
+        app:layout_constraintTop_toBottomOf="@+id/view_title" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="9dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/search_grid"
+        app:layout_constraintEnd_toStartOf="@+id/search_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_title"
+        app:srcCompat="@android:drawable/ic_menu_search"
+        android:onClick="onClickAdminSearch"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="9dp"
+        android:clickable="true"
+        android:onClick = "onClickAdd"
+        app:layout_constraintBottom_toTopOf="@+id/search_grid"
+        app:layout_constraintStart_toEndOf="@+id/search_bar"
+        app:srcCompat="@android:drawable/ic_input_add" />
+</android.support.constraint.ConstraintLayout>
